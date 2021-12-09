@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Collider : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private TomatoAnimation _tomatoAnimation;
+    private void Awake()
     {
-        
+        _tomatoAnimation = GetComponent<TomatoAnimation>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnTriggerEnter2D(Collider2D other)
+    {        
+        if (other.gameObject.name == "Tomato")
+        {
+            Debug.Log("Puta");
+            if (Input.GetKeyDown(KeyCode.X))
+                _tomatoAnimation.ResetPhase();
+        }
     }
 }
