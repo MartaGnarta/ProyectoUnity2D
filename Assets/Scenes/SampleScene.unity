@@ -123,6 +123,38 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &101075858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101075859}
+  m_Layer: 0
+  m_Name: Boxes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &101075859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101075858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1227114, y: -3.5509634, z: -217.9518}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 257856512}
+  - {fileID: 628354739}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &184987342
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +170,8 @@ GameObject:
   - component: {fileID: 184987346}
   - component: {fileID: 184987349}
   - component: {fileID: 184987348}
-  m_Layer: 0
+  - component: {fileID: 184987350}
+  m_Layer: 9
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,6 +336,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b7bcc8b3a7b7744c8673115fec9d904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &184987350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184987342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b35198d163fff74f86f62b6c756517d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &257856510
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,8 +358,8 @@ GameObject:
   m_Component:
   - component: {fileID: 257856512}
   - component: {fileID: 257856511}
-  m_Layer: 0
-  m_Name: Square
+  m_Layer: 7
+  m_Name: Shed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,12 +424,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257856510}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.891, y: -4.315, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.7682884, y: -0.76403666, z: 217.9518}
   m_LocalScale: {x: 0.8098, y: 0.9932, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 101075859}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -514,8 +559,8 @@ GameObject:
   m_Component:
   - component: {fileID: 628354739}
   - component: {fileID: 628354738}
-  m_Layer: 0
-  m_Name: Square (1)
+  m_Layer: 7
+  m_Name: Basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,12 +625,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628354737}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.954, y: -4.661, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.8312886, y: -1.1100364, z: 217.9518}
   m_LocalScale: {x: 0.6604, y: 0.3413, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 101075859}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &916330421
 GameObject:
@@ -2354,6 +2399,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1435980193}
+    - target: {fileID: 6421852977480198982, guid: 99cb793eba540774595bd8df2d5ce163, type: 3}
+      propertyPath: phaseNum
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99cb793eba540774595bd8df2d5ce163, type: 3}
 --- !u!1 &6421852976719521937 stripped
@@ -2371,7 +2420,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.04074709}
