@@ -19,21 +19,7 @@ public class TomatoAnimation : MonoBehaviour
 
     private void Update()
     {
-        if (_controller.GetTime() == waitTime[0])
-        {
-            phaseNum++;
-        }
-
-        if (_controller.GetTime() == waitTime[1])
-        {
-            phaseNum++;
-        }
-
-        if (_controller.GetTime() == waitTime[2])
-        {
-            phaseNum++;
-        }
-
+        NextPhase();
         _animator.SetInteger("phase", phaseNum);
     }
 
@@ -44,7 +30,18 @@ public class TomatoAnimation : MonoBehaviour
 
     public void NextPhase()
     {
-        phaseNum++;
+        if (_controller.GetTime() == waitTime[0])
+        {
+            phaseNum = 1;
+        }
+        else if (_controller.GetTime() == waitTime[1])
+        {
+            phaseNum = 2;
+        }
+        else if (_controller.GetTime() == waitTime[2])
+        {
+            phaseNum = 3;
+        }
     }
 }
 
