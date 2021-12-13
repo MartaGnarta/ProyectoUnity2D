@@ -8,7 +8,7 @@ public class InputSystemKeyboard : MonoBehaviour
     public float hor { get; private set; }
     public float ver { get; private set; }
 
-    public event Action OnFire = delegate { }; // Nombre que queramos 
+    /*public event Action OnFire = delegate { };*/ // Nombre que queramos 
     //public event Action OnFire = delegate { };
 
     // Set asignar
@@ -21,8 +21,8 @@ public class InputSystemKeyboard : MonoBehaviour
         hor = Input.GetAxis("Horizontal");
         ver = Input.GetAxis("Vertical");
 
-        if (Input.GetButtonDown("Fire1"))
-            OnFire();
+        //if (Input.GetButtonDown("Fire1"))
+        //    OnFire();
 
         //if (Input.GetKeyDown("Jump"))
 

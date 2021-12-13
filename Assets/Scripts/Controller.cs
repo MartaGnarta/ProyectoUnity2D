@@ -10,8 +10,14 @@ public class Controller : MonoBehaviour
     {
         _timer = GetComponent<Timer>();
     }
+
     public float GetTime()
     {
         return _timer.timeValue;
+    }
+
+    public void ResetTimer()
+    {
+        _timer.resetTimer();
     }
 }

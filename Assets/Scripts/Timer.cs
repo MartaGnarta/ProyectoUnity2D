@@ -20,9 +20,15 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            timeValue += 90;
+            timeValue = 0;
+
         }
 
         _displayTimer.DisplayTime(timeValue);
+    }
+
+    public void resetTimer()
+    {
+        timeValue = 20;
     }
 }

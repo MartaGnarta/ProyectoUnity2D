@@ -10,9 +10,9 @@ public class CharacterMovement : MonoBehaviour
     private Animator _anim;
 
     public float jumpspeed;
-    //public Transform GroundChecker;
-    //public float radius;
-    //public LayerMask groundMask;
+    public Transform GroundChecker;
+    public float radius;
+    public LayerMask groundMask;
 
     [SerializeField]
     private float _velocity;
@@ -53,14 +53,14 @@ public class CharacterMovement : MonoBehaviour
             _anim.SetBool("run", false);
         }
 
-        //bool t = Physics2D.OverlapCircle(GroundChecker.position, radius, groundMask);
+        bool t = Physics2D.OverlapCircle(GroundChecker.position, radius, groundMask);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //if (t)
-            //{
+            if (t)
+            {
                 _rb.velocity = new Vector2(_rb.velocity.x, jumpspeed);
-            //}
+            }
         }
     }
 }

@@ -17,31 +17,47 @@ public class TomatoAnimation : MonoBehaviour
         _controller = GetComponent<Controller>();
     }
 
+    void OnEnable()
+    {
+        GetComponent<Collider>().OnFire += ResetPhase; // Suscribirse al evento. Shoot nombre de la funcion sin parentesis
+    }
+
+    void OnDisable()
+    {
+        GetComponent<Collider>().OnFire -= ResetPhase; // Desuscribirse
+    }
+
     private void Update()
     {
-        NextPhase();
+        NextPhase();        
         _animator.SetInteger("phase", phaseNum);
     }
 
-    public void ResetPhase()
+    private void ResetPhase()
     {
-        phaseNum = 2;
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            phaseNum = 2;
+            _controller.ResetTimer();
+            Debug.Log("AAAAA");
+
+        }
     }
 
     public void NextPhase()
     {
-        if (_controller.GetTime() == waitTime[0])
+        if (_controller.GetTime() < waitTime[0])
         {
-            phaseNum = 1;
+            phaseNum = 1;            
         }
-        else if (_controller.GetTime() == waitTime[1])
+        if (_controller.GetTime() < waitTime[1])
         {
-            phaseNum = 2;
+            phaseNum = 2;            
         }
-        else if (_controller.GetTime() == waitTime[2])
+        if (_controller.GetTime() < waitTime[2])
         {
             phaseNum = 3;
+            ResetPhase();
         }
     }
 }
-
