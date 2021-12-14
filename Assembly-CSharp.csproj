@@ -61,12 +61,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\TomatoAnimation.cs" />
     <Compile Include="Assets\Scripts\Collider.cs" />
-    <Compile Include="Assets\Scripts\CharacterMovement.cs" />
-    <Compile Include="Assets\Scripts\InputSystemKeyboard.cs" />
     <Compile Include="Assets\Scripts\DisplayTimer.cs" />
-    <Compile Include="Assets\Scripts\Timer.cs" />
-    <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\InputSystemKeyboard.cs" />
+    <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\CharacterMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

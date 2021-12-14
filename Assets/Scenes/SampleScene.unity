@@ -320,7 +320,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 184987342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b66f39d01cda024ebb7cc176edafaa5, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c27756fc47e4ad44ab4e54922068af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpspeed: 6.5
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 184987342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7bcc8b3a7b7744c8673115fec9d904, type: 3}
+  m_Script: {fileID: 11500000, guid: 98f83a4e4719b784889475a53105ad26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &184987350
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 926372756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f390f43695d1286419a13796c7c98080, type: 3}
+  m_Script: {fileID: 11500000, guid: de3c3204fe608054b8dd517e0bfa2d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &926372759
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 926372756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0baf69e97b2286419d32ea06b4589c4, type: 3}
+  m_Script: {fileID: 11500000, guid: eda23033fd2d9c34889be30d3a0e267a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeValue: 40
