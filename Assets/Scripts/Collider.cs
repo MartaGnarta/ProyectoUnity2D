@@ -5,24 +5,15 @@ using System;
 
 public class Collider : MonoBehaviour
 {
-    public event Action OnFire = delegate { };
+    public LayerMask mask;
 
-    //private TomatoAnimation _tomatoAnimation;
-    //private void Awake()
-    //{
-    //    _tomatoAnimation = GetComponent<TomatoAnimation>();
-    //}
-    void OnTriggerEnter2D(Collider2D other)
+    public event Action Picking = delegate { };
+
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Tomato")
+        if ((mask.value & (1 << other.transform.gameObject.layer)) > 0)
         {
-            OnFire();
-            Debug.Log("Puta");
-            //if (Input.GetKeyDown(KeyCode.))
-            //{
-            //    Debug.Log("Puta");
-                
-            //}                
+            Picking();
         }
     }
 }
