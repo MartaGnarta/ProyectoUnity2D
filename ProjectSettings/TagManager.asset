@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 3235637445
+    locked: 0
+  - name: platforms
+    uniqueID: 4000555377
+    locked: 0
+  - name: boxes
+    uniqueID: 3267175549
+    locked: 0
+  - name: plants
+    uniqueID: 80531123
+    locked: 0
+  - name: player
+    uniqueID: 517249825
+    locked: 0
+  - name: obstacles
+    uniqueID: 2252680133
+    locked: 0

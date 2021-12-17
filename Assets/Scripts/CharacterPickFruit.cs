@@ -6,6 +6,8 @@ public class CharacterPickFruit : MonoBehaviour
 {
     public LayerMask mask;
 
+    private bool triggered;
+
     [SerializeField]
     private PlantPhases _plantPhases;
 
@@ -19,17 +21,31 @@ public class CharacterPickFruit : MonoBehaviour
         GetComponent<InputSystemKeyboard>().OnFire -= pickFruit;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         _plantPhases = FindObjectOfType<PlantPhases>();
+        triggered = false;
     }
 
     private void pickFruit()
-    {
-        if ((mask.value & (1 << transform.gameObject.layer)) > 0)
+    {        
+        if (triggered)
         {
             _plantPhases.ResetPhase();
-        }        
+        }      
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if ((mask.value & (1 << other.transform.gameObject.layer)) > 0)
+        {
+            triggered = true;
+            Debug.Log(LayerMask.LayerToName(8));
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        triggered = false;
     }
 }

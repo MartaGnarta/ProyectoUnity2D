@@ -16,7 +16,6 @@ public class CharacterJump : MonoBehaviour
     public Transform GroundChecker;
     public float radius;
     public LayerMask groundMask;
-    public LayerMask mask;
 
     void OnEnable()
     {

@@ -34,7 +34,6 @@ public class PlantPhases : MonoBehaviour
 
     public void ResetPhase()
     {
-        Debug.Log("si");
         if (phaseNum == 3)
         {
             phaseNum = 2;

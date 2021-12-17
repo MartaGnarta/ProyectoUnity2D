@@ -19,7 +19,7 @@ public class CharacterMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _sp = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
-        _collider = GetComponent<Collider>();       
+        _collider = GetComponent<Collider>();
     }
 
     void Update()
@@ -46,6 +46,6 @@ public class CharacterMovement : MonoBehaviour
         if (_input.hor == 0)
         {
             _anim.SetBool("run", false);
-        }        
+        }
     }
 }
