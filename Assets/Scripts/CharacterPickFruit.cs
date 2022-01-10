@@ -34,6 +34,10 @@ public class CharacterPickFruit : MonoBehaviour
             _plantPhases.ResetPhase();
         }      
     }
+    private void pickedFruit()
+    {
+
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
