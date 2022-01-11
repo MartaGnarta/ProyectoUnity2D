@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
 
         }
 
-        _displayTimer.DisplayTime(timeValue);
+        //_displayTimer.DisplayTime(timeValue);
     }
 
     public void resetTimer()
