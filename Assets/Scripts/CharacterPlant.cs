@@ -2,36 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterPlant : MonoBehaviour
+public class CharacterPickFruit : MonoBehaviour
 {
     public LayerMask mask;
 
-    private bool triggered;
+    private Inventory _inventory;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        _inventory = GetComponent<Inventory>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerStay2D(Collider2D other)
     {
-        
-    }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if ((mask.value & (1 << other.transform.gameObject.layer)) > 0)
+        if (other.gameObject.layer == LayerMask.NameToLayer("terrain"))
         {
-            triggered = true;
-            Debug.Log(LayerMask.LayerToName(8));
-        }
-    }
+            var f = other.GetComponent<TerrainFull>();
 
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        triggered = false;
+            if (Input.GetButtonDown("Fire1") && !f.full)
+            {
+                Instantiate(_inventory.plant, other.transform.position, other.transform.rotation);
+                f.Placed();
+                Debug.Log("Plantada");
+            }
+        }
     }
 }

@@ -72,6 +72,8 @@
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\InputSystemKeyboard.cs" />
     <Compile Include="Assets\Scripts\PlantPhases.cs" />
+    <Compile Include="Assets\Scripts\UpdateInventory.cs" />
+    <Compile Include="Assets\Scripts\TerrainFull.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

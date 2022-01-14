@@ -355,8 +355,10 @@
 "Assets/Scripts/InputSystemKeyboard.cs"
 "Assets/Scripts/Inventory.cs"
 "Assets/Scripts/PlantPhases.cs"
+"Assets/Scripts/TerrainFull.cs"
 "Assets/Scripts/Timer.cs"
 "Assets/Scripts/TomatoAnimation.cs"
+"Assets/Scripts/UpdateInventory.cs"
 -langversion:8.0
 
 /deterministic

@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private Controller _controller;
+    public GameObject plant;
 
-    private void Awake()
+    private void Start()
     {
-        _controller = GetComponent<Controller>();
+        
     }
+
+    public void AddSeed()
+    {
+
+    }
+
 }

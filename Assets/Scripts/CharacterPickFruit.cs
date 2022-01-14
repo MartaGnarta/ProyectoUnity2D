@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterPickFruit : MonoBehaviour
+public class CharacterPlant : MonoBehaviour
 {
     public LayerMask mask;
 
-    public void OnTriggerEnter2D(Collider2D other)
-    {        
-        if ((mask.value & (1 << other.transform.gameObject.layer)) > 0)
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("plants"))
         {
-            Debug.Log(LayerMask.LayerToName(8));
-
-            other.GetComponent<PlantPhases>().ResetPhase();
+            Debug.Log("Hay planta");
+            if (Input.GetButtonDown("Fire1"))
+            {
+                other.GetComponent<PlantPhases>().ResetPhase();
+            }            
         }
     }
 }
