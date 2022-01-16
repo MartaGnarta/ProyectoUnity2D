@@ -7,13 +7,42 @@ public class Timer : MonoBehaviour
     public float timeValue = 90;
     private DisplayTimer _displayTimer;
 
+    private bool paused;
+
     private void Awake()
     {
         _displayTimer = GetComponent<DisplayTimer>();
+        paused = false;
     }
 
     void Update()
     {
+        if (!paused)
+        {
+            playTimer();
+        }
+        else
+        {
+            stopTimer();
+        }
+
+        //_displayTimer.DisplayTime(timeValue);
+    }
+
+    public void resetTimer()
+    {
+        timeValue = 20;
+    }
+
+    public void stopTimer()
+    {
+        paused = true;
+    }
+
+    public void playTimer()
+    {
+        paused = false; 
+
         if (timeValue > 0)
         {
             timeValue -= Time.deltaTime;
@@ -23,12 +52,5 @@ public class Timer : MonoBehaviour
             timeValue = 0;
 
         }
-
-        //_displayTimer.DisplayTime(timeValue);
-    }
-
-    public void resetTimer()
-    {
-        timeValue = 20;
     }
 }

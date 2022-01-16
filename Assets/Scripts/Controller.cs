@@ -20,4 +20,14 @@ public class Controller : MonoBehaviour
     {
         _timer.resetTimer();
     }
+
+    public void PauseTimer()
+    {
+        _timer.stopTimer();
+    }
+
+    public void PlayTimer()
+    {
+        _timer.playTimer();
+    }
 }

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CharacterPickFruit : MonoBehaviour
 {
-    public LayerMask mask;
-
     private Inventory _inventory;
 
     private void Start()
@@ -23,7 +21,6 @@ public class CharacterPickFruit : MonoBehaviour
             {
                 Instantiate(_inventory.plant, other.transform.position, other.transform.rotation);
                 f.Placed();
-                Debug.Log("Plantada");
             }
         }
     }
