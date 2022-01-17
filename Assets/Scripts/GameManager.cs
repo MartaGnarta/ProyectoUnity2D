@@ -5,14 +5,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    static GameManager instance;
-
-    private PauseMenu _pauseMenu;
+    //static GameManager instance;
 
     // Start is called before the first frame update
     void Start()
     {
-        _pauseMenu = GetComponent<PauseMenu>();
 
         Cursor.visible = true;
 
@@ -26,10 +23,4 @@ public class GameManager : MonoBehaviour
         //    GameObject.Destroy(gameObject);
         //}
     }
-
-    private void Update()
-    {
-        _pauseMenu.DrawMenu();        
-    }
-
 }

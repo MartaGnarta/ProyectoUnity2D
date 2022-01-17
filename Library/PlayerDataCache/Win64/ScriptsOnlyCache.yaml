@@ -53,10 +53,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -108,63 +106,63 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 634}
     - Class: 114
-      Script: {instanceID: 1538}
+      Script: {instanceID: 1678}
     - Class: 114
-      Script: {instanceID: 2056}
+      Script: {instanceID: 2196}
     - Class: 114
-      Script: {instanceID: 2448}
+      Script: {instanceID: 2588}
     - Class: 114
-      Script: {instanceID: 2580}
+      Script: {instanceID: 2720}
     - Class: 114
-      Script: {instanceID: 2664}
+      Script: {instanceID: 2804}
     - Class: 114
-      Script: {instanceID: 2732}
+      Script: {instanceID: 2872}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2954}
     - Class: 114
-      Script: {instanceID: 2974}
+      Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3296}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 3710}
+      Script: {instanceID: 3438}
     - Class: 114
-      Script: {instanceID: 5272}
+      Script: {instanceID: 3742}
     - Class: 114
-      Script: {instanceID: 5454}
+      Script: {instanceID: 3854}
     - Class: 114
-      Script: {instanceID: 5544}
+      Script: {instanceID: 5416}
     - Class: 114
-      Script: {instanceID: 5616}
+      Script: {instanceID: 5598}
     - Class: 114
-      Script: {instanceID: 5646}
+      Script: {instanceID: 5688}
     - Class: 114
-      Script: {instanceID: 6020}
+      Script: {instanceID: 5760}
     - Class: 114
-      Script: {instanceID: 6348}
+      Script: {instanceID: 5790}
     - Class: 114
-      Script: {instanceID: 6388}
+      Script: {instanceID: 6164}
     - Class: 114
-      Script: {instanceID: 6442}
+      Script: {instanceID: 6492}
     - Class: 114
-      Script: {instanceID: 6652}
+      Script: {instanceID: 6532}
     - Class: 114
-      Script: {instanceID: 6782}
+      Script: {instanceID: 6586}
     - Class: 114
-      Script: {instanceID: 6974}
+      Script: {instanceID: 6796}
     - Class: 114
-      Script: {instanceID: 7234}
+      Script: {instanceID: 6926}
     - Class: 114
-      Script: {instanceID: 7488}
+      Script: {instanceID: 7118}
     - Class: 114
-      Script: {instanceID: 7788}
+      Script: {instanceID: 7378}
     - Class: 114
-      Script: {instanceID: 8078}
+      Script: {instanceID: 7632}
     - Class: 114
-      Script: {instanceID: 8474}
+      Script: {instanceID: 7932}
     - Class: 114
-      Script: {instanceID: 24260}
+      Script: {instanceID: 8222}
     - Class: 114
-      Script: {instanceID: 362468}
+      Script: {instanceID: 8618}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -213,21 +211,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1538}
+      Script: {instanceID: 1678}
     - Class: 114
-      Script: {instanceID: 2732}
+      Script: {instanceID: 2872}
     - Class: 114
-      Script: {instanceID: 2974}
+      Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3296}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 6020}
+      Script: {instanceID: 3438}
     - Class: 114
-      Script: {instanceID: 6388}
+      Script: {instanceID: 6164}
     - Class: 114
-      Script: {instanceID: 6974}
+      Script: {instanceID: 6532}
     - Class: 114
-      Script: {instanceID: 362468}
+      Script: {instanceID: 7118}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -487,6 +485,12 @@ ScriptsOnlyBuild:
     className: RuleOverrideTile
   - hash:
       serializedVersion: 2
+      Hash: 51ab958cbe2ba666a7b6784671693de7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonScene
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -641,6 +645,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: VariablesAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 5134658ededec49d2ed3476d50ffc7cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1567,18 +1577,12 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 5134658ededec49d2ed3476d50ffc7cb
+      Hash: e22519ad1e213fee73d5493089edfaba
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PauseMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 51ab958cbe2ba666a7b6784671693de7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ButtonScene
+    className: PickFruit
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/marta/OneDrive/Escritorio/GreenHouse Moon/Prueba.exe
+  playerPath: C:/Users/Alumno/Desktop/Nueva carpeta/Prueba.exe
