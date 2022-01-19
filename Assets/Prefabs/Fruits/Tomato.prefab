@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 534957815802118126}
   - component: {fileID: 534957815802118113}
   - component: {fileID: 534957815802118120}
+  - component: {fileID: 6878946266541023726}
   - component: {fileID: 534957815802118125}
   - component: {fileID: 534957815802118114}
   - component: {fileID: 534957815802118115}
   - component: {fileID: 534957815802118122}
-  - component: {fileID: 6878946266541023726}
   - component: {fileID: -6181519715576619625}
-  - component: {fileID: -3378031745710966503}
+  - component: {fileID: -7644870569472021980}
   m_Layer: 8
   m_Name: Tomato
   m_TagString: Untagged
@@ -132,6 +132,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &6878946266541023726
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534957815802118112}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06617491, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2261749
 --- !u!114 &534957815802118125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,22 +202,6 @@ MonoBehaviour:
   - 12
   - 6
   - 3
---- !u!58 &6878946266541023726
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534957815802118112}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.06617491, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.2261749
 --- !u!114 &-6181519715576619625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,8 +215,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles:
-  - {fileID: 8053793912539739085, guid: ce78745a97390634c957c3449323215c, type: 3}
---- !u!114 &-3378031745710966503
+  - {fileID: 7053890060047407176, guid: ce78745a97390634c957c3449323215c, type: 3}
+--- !u!114 &-7644870569472021980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,10 +225,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 534957815802118112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df80d502c16f4544aa96be33b04fe174, type: 3}
+  m_Script: {fileID: 11500000, guid: c016963ca827bf6419bc0e25cf732579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  items:
-  - {fileID: 0}
-  picked: 0

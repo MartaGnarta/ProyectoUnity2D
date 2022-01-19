@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7230393039330226229}
   - component: {fileID: 7230393039330226250}
   - component: {fileID: 2161582193973605748}
+  - component: {fileID: -3651747754083068111}
   m_Layer: 8
   m_Name: Beet
   m_TagString: Untagged
@@ -214,4 +215,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles:
-  - {fileID: 8053793912539739085, guid: ce78745a97390634c957c3449323215c, type: 3}
+  - {fileID: 7053890060047407176, guid: ce78745a97390634c957c3449323215c, type: 3}
+--- !u!114 &-3651747754083068111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230393039330226251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c016963ca827bf6419bc0e25cf732579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
