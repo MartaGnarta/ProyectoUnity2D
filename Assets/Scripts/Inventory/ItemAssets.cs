@@ -11,6 +11,8 @@ public class ItemAssets : MonoBehaviour
         Instance = this;
     }
 
+    public GameObject[] prefabs;
+
     public Sprite tomato;
     public Sprite potato;
     public Sprite beet;

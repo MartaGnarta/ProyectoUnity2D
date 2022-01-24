@@ -15,6 +15,11 @@ public class UI_Inventory : MonoBehaviour
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
     }
 
+    private void Update()
+    {
+        RefreshInventoryItems();
+    }
+
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;

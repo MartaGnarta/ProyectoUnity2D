@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterPickFruit : MonoBehaviour
+public class CharacterPlant : MonoBehaviour
 {
     public GameObject fruit;
-    private Item item;
-
     public void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("terrain"))
@@ -19,10 +17,5 @@ public class CharacterPickFruit : MonoBehaviour
                 f.Placed();
             }
         }
-    }
-
-    public void SetItem(Item item)
-    {
-        this.item = item;
     }
 }

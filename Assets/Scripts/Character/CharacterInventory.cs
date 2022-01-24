@@ -14,8 +14,29 @@ public class CharacterInventory : MonoBehaviour
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
     }
-    private void AddInventory()
+
+    private void Update()
     {
-        //inventory.AddItem();
+        
+    }
+
+    public void InventoryActive(int fruitNum)
+    {
+        Item result = inventory.GetItemList().Find(
+            delegate (Item it)
+            {
+                return it.index == fruitNum;
+            }
+            );
+            if (result != null)
+            {
+                Debug.Log("Activo: " + result.itemType);
+                result.active = true;
+            }
+            else
+            {
+                Debug.Log("Activo2: " + result.itemType);
+                result.active = false;
+            }
     }
 }

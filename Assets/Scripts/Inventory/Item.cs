@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Item { 
     public enum ItemType
-    {
-        Tomato,
+    {        
         Beet,
-        Potato,
         Eggplant,
+        Potato,        
+        Tomato,
         TomatoSeed,
         BeetSeed,
         PotatoSeed,
         EggplantSeed,
     }
 
-    public ItemType itemType;
-    public int amount;
     public int index;
+    public ItemType itemType;
+    public int amount;    
     public bool active;
 
     public Sprite GetSprite()
@@ -44,16 +44,19 @@ public class Item {
         }
     }
 
-    public bool IsStackable()
+    public int GetPlantFruit()
     {
         switch (itemType)
         {
             default:
             case ItemType.Tomato:
+                return index;
             case ItemType.Beet:
+                return index; 
             case ItemType.Potato:
+                return index; 
             case ItemType.Eggplant:
-                return true;
+                return index;
         }
     }
 }
