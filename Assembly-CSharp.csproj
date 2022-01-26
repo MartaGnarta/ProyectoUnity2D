@@ -60,14 +60,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Inventory\UI_Inventory.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterPlant.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterPickFruit.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonScene.cs" />
     <Compile Include="Assets\Scripts\Manager\Collider.cs" />
-    <Compile Include="Assets\Scripts\Inventory\ItemAssets.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Game\Timer.cs" />
+    <Compile Include="Assets\Scripts\Inventory\SetItem.cs" />
     <Compile Include="Assets\Scripts\Game\DisplayTimer.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterJump.cs" />
     <Compile Include="Assets\Scripts\Plants\PlantAnimation.cs" />
@@ -76,11 +75,12 @@
     <Compile Include="Assets\Scripts\Manager\Controller.cs" />
     <Compile Include="Assets\Scripts\Particles\ParticlesManager.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterInventory.cs" />
-    <Compile Include="Assets\Scripts\Inventory\Item.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
-    <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Manager\InputSystemKeyboard.cs" />
     <Compile Include="Assets\Scripts\Plants\PlantPhases.cs" />
+    <Compile Include="Assets\Scripts\Inventory\SetInventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\SetItemAssets.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Update_InventoryUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

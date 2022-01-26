@@ -4,39 +4,17 @@ using UnityEngine;
 
 public class CharacterInventory : MonoBehaviour
 {
-    private Inventory inventory;
-
+    private SetInventory inventory;
     [SerializeField]
-    private UI_Inventory uiInventory;
+    private Update_InventoryUI uiInventory;
 
-    private void Start()
+    private void Awake()
     {
-        inventory = new Inventory();
-        uiInventory.SetInventory(inventory);
+        inventory = new SetInventory();
     }
 
-    private void Update()
+    public void prueba()
     {
-        
-    }
-
-    public void InventoryActive(int fruitNum)
-    {
-        Item result = inventory.GetItemList().Find(
-            delegate (Item it)
-            {
-                return it.index == fruitNum;
-            }
-            );
-            if (result != null)
-            {
-                Debug.Log("Activo: " + result.itemType);
-                result.active = true;
-            }
-            else
-            {
-                Debug.Log("Activo2: " + result.itemType);
-                result.active = false;
-            }
+        inventory.GetActiveDisabled(3);
     }
 }
