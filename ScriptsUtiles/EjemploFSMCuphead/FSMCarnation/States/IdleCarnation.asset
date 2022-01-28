@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8595016817626e54abb7c9bcece8379a, type: 3}
+  m_Name: IdleCarnation
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 8fd794f15a7d7174291ca32d3cf12cf5, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: b443f4b0cb72be445b7b7d05a990bbc1, type: 2}
+    trueState: {fileID: 11400000, guid: de0f817235928d641949f40fb8845682, type: 2}
+    falseState: {fileID: 0}

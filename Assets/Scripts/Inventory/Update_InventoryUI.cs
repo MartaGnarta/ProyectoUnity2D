@@ -12,8 +12,8 @@ public class Update_InventoryUI : MonoBehaviour
     {
         inventorySlot.gameObject.SetActive(true);
     }
-    public void Update()
+    public void UpdateInventory(SetItem item)
     {
-        //inventorySlot.GetComponent<Image>().sprite = SetItemAssets.Instance.item[inventory.GetActiveItemIndex()];
+        inventorySlot.GetComponent<Image>().sprite = item.GetSprite();
     }
 }

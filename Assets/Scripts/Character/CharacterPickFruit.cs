@@ -21,7 +21,7 @@ public class CharacterPickFruit : MonoBehaviour
             if (Input.GetButtonDown("Fire1")) //&& _plant.phaseNum == 3
             {
                 _plant.ResetPhase();
-                _characterInventory.prueba();               
+                _characterInventory.AddItemInventory(other.GetComponent<FruitIndex>().getIndex());               
             }
         }
     }

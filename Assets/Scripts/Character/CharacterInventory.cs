@@ -13,8 +13,9 @@ public class CharacterInventory : MonoBehaviour
         inventory = new SetInventory();
     }
 
-    public void prueba()
+    public void AddItemInventory(int index)
     {
-        inventory.GetActiveDisabled(3);
+        //AddItem(new SetItem { itemType = SetItem.ItemType.Beet, index = 0, amount = 0, active = false });
+        inventory.AddItem(new SetItem { itemType = SetItem.ItemType.Beet, index = 0, amount = 0, active = true });
     }
 }

@@ -344,6 +344,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/Scripts/Character/CharacterGiveFruit.cs"
 "Assets/Scripts/Character/CharacterInventory.cs"
 "Assets/Scripts/Character/CharacterJump.cs"
 "Assets/Scripts/Character/CharacterMovement.cs"
@@ -363,7 +364,10 @@
 "Assets/Scripts/Plants/FruitIndex.cs"
 "Assets/Scripts/Plants/PlantAnimation.cs"
 "Assets/Scripts/Plants/PlantPhases.cs"
+"Assets/Scripts/Plants/PlantScriptableObject.cs"
+"Assets/Scripts/Plants/PlantSystem.cs"
 "Assets/Scripts/Plants/TerrainFull.cs"
+"Assets/Scripts/Plants/TomatoSystem.cs"
 "Assets/Scripts/UI/ButtonScene.cs"
 "Assets/Scripts/UI/PauseMenu.cs"
 -langversion:8.0

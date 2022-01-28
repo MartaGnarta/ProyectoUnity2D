@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8595016817626e54abb7c9bcece8379a, type: 3}
+  m_Name: ShotCarnation
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: f7a80adf885d9984e8effca9db858bfa, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: 3138ee715959ef64fb6935dac4f4b654, type: 2}
+    trueState: {fileID: 11400000, guid: c9966cb4efaad164295d9ba38bf79c48, type: 2}
+    falseState: {fileID: 0}

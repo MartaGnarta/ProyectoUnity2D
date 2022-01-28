@@ -68,9 +68,11 @@
     <Compile Include="Assets\Scripts\Game\Timer.cs" />
     <Compile Include="Assets\Scripts\Inventory\SetItem.cs" />
     <Compile Include="Assets\Scripts\Game\DisplayTimer.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Update_InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterJump.cs" />
     <Compile Include="Assets\Scripts\Plants\PlantAnimation.cs" />
     <Compile Include="Assets\Scripts\Plants\TerrainFull.cs" />
+    <Compile Include="Assets\Scripts\Inventory\SetItemAssets.cs" />
     <Compile Include="Assets\Scripts\Plants\FruitIndex.cs" />
     <Compile Include="Assets\Scripts\Manager\Controller.cs" />
     <Compile Include="Assets\Scripts\Particles\ParticlesManager.cs" />
@@ -79,8 +81,10 @@
     <Compile Include="Assets\Scripts\Manager\InputSystemKeyboard.cs" />
     <Compile Include="Assets\Scripts\Plants\PlantPhases.cs" />
     <Compile Include="Assets\Scripts\Inventory\SetInventory.cs" />
-    <Compile Include="Assets\Scripts\Inventory\SetItemAssets.cs" />
-    <Compile Include="Assets\Scripts\Inventory\Update_InventoryUI.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterGiveFruit.cs" />
+    <Compile Include="Assets\Scripts\Plants\PlantScriptableObject.cs" />
+    <Compile Include="Assets\Scripts\Plants\PlantSystem.cs" />
+    <Compile Include="Assets\Scripts\Plants\TomatoSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
