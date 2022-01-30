@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private void Awake()
+    {
+        SoundManager.PlaySound(SoundManager.Sound.Background);
+    }
+
     //static GameManager instance;
 
     // Start is called before the first frame update

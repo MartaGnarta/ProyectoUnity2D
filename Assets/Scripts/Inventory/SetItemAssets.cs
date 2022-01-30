@@ -13,5 +13,14 @@ public class SetItemAssets : MonoBehaviour
 
     public GameObject[] prefabs;
     public Sprite[] item;
+
+    public SoundAudioClip[] soundAudioClips;
+
+    [System.Serializable]
+    public class SoundAudioClip
+    {
+        public SoundManager.Sound sound;
+        public AudioClip audioClip;
+    }
 }
 

@@ -32,11 +32,11 @@ public class PauseMenu : MonoBehaviour
     public void pauseGame()
     {
         if (pauseActive)
-        {
+        {            
             Time.timeScale = 0;
         }   
         else
-        {
+        {            
             Time.timeScale = 1;
         }
     }

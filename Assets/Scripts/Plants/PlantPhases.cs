@@ -33,6 +33,7 @@ public class PlantPhases : MonoBehaviour
             _controller.PauseTimer();
             phaseNum = 3;
             _particleManager.DrawParticles();
+            SoundManager.PlaySound(SoundManager.Sound.PlantGrow);
         }
     }
 

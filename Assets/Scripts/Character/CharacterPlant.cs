@@ -21,6 +21,7 @@ public class CharacterPlant : MonoBehaviour
             {
                 Instantiate(fruit, other.transform.position, other.transform.rotation);
                 f.Placed();
+                SoundManager.PlaySound(SoundManager.Sound.PlayerPlant);
             }
         }
     }
