@@ -5,7 +5,6 @@ using UnityEngine;
 public class SetInventory 
 {
     private List<SetItem> itemList;
-    private Update_InventoryUI _InventoryUI;
 
     public SetInventory()
     {
@@ -20,26 +19,27 @@ public class SetInventory
         AddItem(new SetItem { itemType = SetItem.ItemType.EggplantSeed, index = 5, amount = 0, active = false });
         AddItem(new SetItem { itemType = SetItem.ItemType.PotatoSeed, index = 6, amount = 0, active = false });
         AddItem(new SetItem { itemType = SetItem.ItemType.TomatoSeed, index = 7, amount = 0, active = false });
+
+        Debug.Log(itemList.Count);
     }
 
     public void AddItem(SetItem item)
     {       
-        foreach (SetItem inventoryItem in itemList)
-        {
-            if (inventoryItem.itemType == item.itemType)
-            {
-                inventoryItem.amount += item.amount;
-                inventoryItem.active = true;
-            }
-            else
-            {
+        //foreach (SetItem inventoryItem in itemList)
+        //{
+        //    if (inventoryItem.itemType == item.itemType)
+        //    {
+        //        inventoryItem.amount += item.amount;
+        //        inventoryItem.active = true;
+        //    }
+        //    else
+        //    {
                 
-            }
-        }
+        //    }
+        //}
         itemList.Add(item);
-        Debug.Log(itemList.Count);
+        //Debug.Log(itemList.Count);
     }
-
 
 
     public List<SetItem> GetItemList()

@@ -60,5 +60,10 @@ public class SetItem
                 return SetItemAssets.Instance.prefabs[3];
         }
     }
+
+    //public override string ToString()
+    //{
+    //    return base.ToString() + "N: " + itemType.ToString() + "I: " + index.ToString() + "ACT: " + active.ToString() + "AM: " + amount.ToString();
+    //}
 }
 

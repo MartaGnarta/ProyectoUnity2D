@@ -7,21 +7,34 @@ public class Update_InventoryUI : MonoBehaviour
 {
     private SetInventory inventory;
     public Transform inventorySlot;
+    public bool iventoryActive;
 
-    private void Start()
+    public void SetInventory(SetInventory inventory)
     {
-        inventorySlot.gameObject.SetActive(true);
+        this.inventory = inventory;
+        Debug.Log(inventory);
+        UpdateInventory();
     }
 
-    public void UpdateInventory(int index)
+    public void UpdateInventory()
     {
-        foreach (SetItem item in inventory.GetItemList())
+        Debug.Log(inventory.GetItemList());
+
+        iventoryActive = false;
+
+        foreach (SetItem itemA in inventory.GetItemList())
         {
-            if (item.index == index)
+            if (itemA.active)
             {
-                Debug.Log(item.itemType);
-                inventorySlot.GetComponent<Image>().sprite = item.GetSprite();
+                inventorySlot.gameObject.SetActive(true);
+                inventorySlot.GetComponent<Image>().sprite = itemA.GetSprite();
+                iventoryActive = true;
             }
-        }        
+        }
+    }
+
+    public bool IsinventoryActive()
+    {
+        return iventoryActive;
     }
 }

@@ -5,22 +5,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //static GameManager instance;
+    private Update_InventoryUI _inventoryUI;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        _inventoryUI = GetComponent<Update_InventoryUI>();
+    }
 
-        Cursor.visible = true;
-
-        //if (instance == null)
-        //{
-        //    GameObject.DontDestroyOnLoad(gameObject);
-        //    instance = this;
-        //}
-        //else
-        //{
-        //    GameObject.Destroy(gameObject);
-        //}
+    public bool isInventoryActive()
+    {
+        return _inventoryUI.iventoryActive;
     }
 }
