@@ -15,6 +15,11 @@ public static class SoundManager {
         return GameObject.Find("SoundManager");
     }
 
+    public static GameObject GetMusicObject()
+    {
+        return GameObject.Find("MusicManager");
+    }
+
     public static void PlaySound(Sound sound)
     {
         GetSoundObject().GetComponent<AudioSource>().PlayOneShot(GetAudioClip(sound));
@@ -30,9 +35,29 @@ public static class SoundManager {
         GetSoundObject().GetComponent<AudioSource>().mute = false;
     }
 
-    public static bool isMuted()
+    public static void PauseMusic()
+    {
+        GetMusicObject().GetComponent<AudioSource>().mute = true;
+    }
+
+    public static void ResumeMusic()
+    {
+        GetMusicObject().GetComponent<AudioSource>().mute = false;
+    }
+
+    public static bool isSoundMuted()
     {
         return GetSoundObject().GetComponent<AudioSource>().mute;
+    }
+
+    public static bool isMusicMuted()
+    {
+        return GetMusicObject().GetComponent<AudioSource>().mute;
+    }
+
+    public static void soundValue()
+    {
+
     }
 
     private static AudioClip GetAudioClip(Sound sound)

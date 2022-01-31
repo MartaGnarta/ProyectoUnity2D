@@ -7,6 +7,7 @@ public class CharacterPickFruit : MonoBehaviour
     private CharacterInventory _characterInventory;
     private int fruitNum;
 
+
     private void Start()
     {
         _characterInventory = GetComponent<CharacterInventory>();

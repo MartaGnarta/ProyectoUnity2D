@@ -9,5 +9,4 @@ public class PlantScriptableObject : ScriptableObject
     public float[] delayTimeToGrow;
     public int PhaseIndex;
     public int plantIndex;
-
 }

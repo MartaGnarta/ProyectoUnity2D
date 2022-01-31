@@ -5,20 +5,21 @@ using UnityEngine;
 public class SetInventory 
 {
     private List<SetItem> itemList;
+    private Update_InventoryUI _InventoryUI;
 
     public SetInventory()
     {
         itemList = new List<SetItem>();
 
-        //AddItem(new SetItem { itemType = SetItem.ItemType.Beet, index = 0, amount = 0, active = false });
-        //AddItem(new SetItem { itemType = SetItem.ItemType.Eggplant, index = 1, amount = 0, active = false });
-        //AddItem(new SetItem { itemType = SetItem.ItemType.Potato, index = 2, amount = 0, active = false });
-        //AddItem(new SetItem { itemType = SetItem.ItemType.Tomato, index = 3, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Beet, index = 0, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Eggplant, index = 1, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Potato, index = 2, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Tomato, index = 3, amount = 0, active = false });
 
-        //AddItem(new SetItem { itemType = SetItem.ItemType.BeetSeed, index = 4, amount = 0, active = true });
-        //AddItem(new SetItem { itemType = SetItem.ItemType.EggplantSeed, index = 5, amount = 0, active = false });
-        //AddItem(new SetItem { itemType = SetItem.ItemType.PotatoSeed, index = 6, amount = 0, active = false });
-        //AddItem(new SetItem { itemType = SetItem.ItemType.TomatoSeed, index = 7, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.BeetSeed, index = 4, amount = 0, active = true });
+        AddItem(new SetItem { itemType = SetItem.ItemType.EggplantSeed, index = 5, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.PotatoSeed, index = 6, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.TomatoSeed, index = 7, amount = 0, active = false });
     }
 
     public void AddItem(SetItem item)
@@ -32,10 +33,10 @@ public class SetInventory
             }
             else
             {
-                itemList.Add(item);
+                
             }
         }
-
+        itemList.Add(item);
         Debug.Log(itemList.Count);
     }
 
