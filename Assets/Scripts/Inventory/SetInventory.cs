@@ -19,55 +19,59 @@ public class SetInventory
         AddItem(new SetItem { itemType = SetItem.ItemType.EggplantSeed, itemState = SetItem.ItemState.seed, index = 5, amount = 0, active = false });
         AddItem(new SetItem { itemType = SetItem.ItemType.PotatoSeed, itemState = SetItem.ItemState.seed, index = 6, amount = 0, active = false });
         AddItem(new SetItem { itemType = SetItem.ItemType.TomatoSeed, itemState = SetItem.ItemState.seed, index = 7, amount = 1, active = true });
-
-        Debug.Log(itemList.Count);
     }
 
     public void AddItem(SetItem item)
-    {       
-        //foreach (SetItem inventoryItem in itemList)
-        //{
-        //    if (inventoryItem.itemType == item.itemType)
-        //    {
-        //        inventoryItem.amount += item.amount;
-        //        inventoryItem.active = true;
-        //    }
-        //    else
-        //    {
-                
-        //    }
-        //}
-        itemList.Add(item);
-        //Debug.Log(itemList.Count);
+    {      
+        itemList.Add(item);        
     }
 
+    public void IncreseAmountItem(SetItem itemA)
+    {
+        foreach (SetItem item in itemList)
+        {
+            if (itemA == item)
+            {
+                itemA.amount++;
+            }
+        }        
+    }
+
+    public void DecreseAmountItem(SetItem itemA)
+    {
+        foreach (SetItem item in itemList)
+        {
+            if (itemA == item)
+            {
+                itemA.amount--;
+            }
+        }
+    }
+
+    public void SetActivityTrueItem(SetItem itemA)
+    {
+        foreach (SetItem item in itemList)
+        {
+            if (itemA == item)
+            {
+                itemA.active = true;
+            }
+        }
+    }
+
+    public void SetActivityFalseItem(SetItem itemA)
+    {
+        foreach (SetItem item in itemList)
+        {
+            if (itemA == item)
+            {
+                itemA.active = false;
+            }
+        }
+    }
 
     public List<SetItem> GetItemList()
     {
         return itemList;
     }
 }
-
-//public int GetActiveItemIndex()
-//{       
-//    SetItem result = itemList.Find(
-//        delegate (SetItem it)
-//        {
-//            return it.active == true;
-//        }
-//        );
-//        if (result != null)
-//        {
-//            return result.index;
-//        }
-//        else
-//        {
-//            return 0;
-//        }
-//}
-
-//public void GetActiveDisabled(int fruitI)
-//{
-//    itemList.Find(x => x.index == fruitI).active = true;
-//    //Debug.Log("Activa: " + itemList.Find(x => x.index == fruitI).itemType);
-//}

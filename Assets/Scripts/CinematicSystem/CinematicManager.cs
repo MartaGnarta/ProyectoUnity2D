@@ -228,7 +228,6 @@ public class CinematicManager : MonoBehaviour
 
     public void OnTriggerCinematic(int index)
     {
-        Debug.Log("y");
         if (!isCinematicMode)
         {
             isCinematicMode = true;
@@ -239,9 +238,6 @@ public class CinematicManager : MonoBehaviour
         {
             Debug.Log("No puede iniciarse la cinematica " + "porque ya hay una en ejecucion");
         }
-
-        //showingDialog = true;
-        //dialogIndex = index;
     }
 
     public bool IsCinematicMode()

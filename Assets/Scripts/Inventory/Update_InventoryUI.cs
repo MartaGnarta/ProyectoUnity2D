@@ -12,19 +12,16 @@ public class Update_InventoryUI : MonoBehaviour
 
     public void SetInventory(SetInventory inventory)
     {
-        this.inventory = inventory;
-        Debug.Log(inventory);
+        this.inventory = inventory;        
         UpdateInventory();
     }
 
     public void UpdateInventory()
     {
-        Debug.Log(inventory.GetItemList());
-
         iventoryActive = false;
 
         foreach (SetItem itemA in inventory.GetItemList())
-        {
+        {           
             if (itemA.active && itemA.amount > 0)
             {
                 inventorySlot.gameObject.SetActive(true);
@@ -34,20 +31,6 @@ public class Update_InventoryUI : MonoBehaviour
             {
                 inventorySlot.GetComponent<Image>().sprite = noItem;
             }
-        }
-
-        
-    }
-
-    public SetItem activeItem()
-    {
-        foreach (SetItem itemA in inventory.GetItemList())
-        {
-            if (itemA.active && itemA.amount > 0)
-            {
-                return itemA;
-            }            
-        }
-        return null;
+        }        
     }
 }
