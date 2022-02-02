@@ -8,6 +8,7 @@ public class Update_InventoryUI : MonoBehaviour
     private SetInventory inventory;
     public Transform inventorySlot;
     public bool iventoryActive;
+    public Sprite noItem;
 
     public void SetInventory(SetInventory inventory)
     {
@@ -24,17 +25,29 @@ public class Update_InventoryUI : MonoBehaviour
 
         foreach (SetItem itemA in inventory.GetItemList())
         {
-            if (itemA.active)
+            if (itemA.active && itemA.amount > 0)
             {
                 inventorySlot.gameObject.SetActive(true);
-                inventorySlot.GetComponent<Image>().sprite = itemA.GetSprite();
-                iventoryActive = true;
+                inventorySlot.GetComponent<Image>().sprite = itemA.GetSprite();                
+            }
+            else
+            {
+                inventorySlot.GetComponent<Image>().sprite = noItem;
             }
         }
+
+        
     }
 
-    public bool IsinventoryActive()
+    public SetItem activeItem()
     {
-        return iventoryActive;
+        foreach (SetItem itemA in inventory.GetItemList())
+        {
+            if (itemA.active && itemA.amount > 0)
+            {
+                return itemA;
+            }            
+        }
+        return null;
     }
 }

@@ -24,27 +24,35 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        _rb.velocity = new Vector2(_input.hor * _velocity, _rb.velocity.y);
-
-        if (_input.hor > 0)
+        if (!CinematicManager.Instance.IsCinematicMode())
         {
-            _sp.flipX = false;
+            _rb.velocity = new Vector2(_input.hor * _velocity, _rb.velocity.y);
+
+            if (_input.hor > 0)
+            {
+                _sp.flipX = false;
+            }
+            else
+            {
+                if (_input.hor < 0)
+                {
+                    _sp.flipX = true;
+                }
+            }
+
+            if (_input.hor != 0)
+            {
+                _anim.SetBool("run", true);
+            }
+
+            if (_input.hor == 0)
+            {
+                _anim.SetBool("run", false);
+            }
         }
         else
         {
-            if (_input.hor < 0)
-            {
-                _sp.flipX = true;
-            }
-        }
-
-        if (_input.hor != 0)
-        {
-            _anim.SetBool("run", true);
-        }
-
-        if (_input.hor == 0)
-        {
+            _rb.velocity = new Vector2(0, 0);
             _anim.SetBool("run", false);
         }
     }

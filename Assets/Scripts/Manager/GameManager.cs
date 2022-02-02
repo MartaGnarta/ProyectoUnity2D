@@ -6,17 +6,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private Update_InventoryUI _inventoryUI;
+    private CinematicManager _cinematicManager;
 
-    public bool firstDialogue = false;
-
-    private void Awake()
+    private void Start()
     {
         _inventoryUI = GetComponent<Update_InventoryUI>();
-
-        if (!firstDialogue)
-        {
-            CinematicManager.OnTriggerCinematic();
-        }
+        _cinematicManager = GetComponent<CinematicManager>();
     }
 
     public bool isInventoryActive()

@@ -10,15 +10,15 @@ public class SetInventory
     {
         itemList = new List<SetItem>();
 
-        AddItem(new SetItem { itemType = SetItem.ItemType.Beet, index = 0, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.Eggplant, index = 1, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.Potato, index = 2, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.Tomato, index = 3, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Beet, itemState = SetItem.ItemState.fruit, index = 0, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Eggplant, itemState = SetItem.ItemState.fruit, index = 1, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Potato, itemState = SetItem.ItemState.fruit, index = 2, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Tomato, itemState = SetItem.ItemState.fruit, index = 3, amount = 0, active = false });
 
-        AddItem(new SetItem { itemType = SetItem.ItemType.BeetSeed, index = 4, amount = 0, active = true });
-        AddItem(new SetItem { itemType = SetItem.ItemType.EggplantSeed, index = 5, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.PotatoSeed, index = 6, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.TomatoSeed, index = 7, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.BeetSeed, itemState = SetItem.ItemState.seed, index = 4, amount = 0, active = true });
+        AddItem(new SetItem { itemType = SetItem.ItemType.EggplantSeed, itemState = SetItem.ItemState.seed, index = 5, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.PotatoSeed, itemState = SetItem.ItemState.seed, index = 6, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.TomatoSeed, itemState = SetItem.ItemState.seed, index = 7, amount = 1, active = true });
 
         Debug.Log(itemList.Count);
     }

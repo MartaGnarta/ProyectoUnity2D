@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterPlant : MonoBehaviour
 {
-    public GameObject fruit;
+    //public GameObject fruit;
     private CharacterInventory _characterInventory;
 
     private void Start()
@@ -19,8 +19,9 @@ public class CharacterPlant : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1") && !f.full)
             {
-                Instantiate(fruit, other.transform.position, other.transform.rotation);
+                Instantiate(_characterInventory.getSeed(), other.transform.position, other.transform.rotation);
                 f.Placed();
+                _characterInventory.useItem();
                 SoundManager.PlaySound(SoundManager.Sound.PlayerPlant);
             }
         }

@@ -16,8 +16,16 @@ public class SetItem
         EggplantSeed,
     }
 
+    public enum ItemState
+    {
+        seed,
+        fruit,
+        toUse,
+    }
+
     public int index;
     public ItemType itemType;
+    public ItemState itemState;
     public int amount;
     public bool active;
 
@@ -51,13 +59,13 @@ public class SetItem
         {
             default:
             case ItemType.TomatoSeed:
-                return SetItemAssets.Instance.prefabs[0];
+                return SetItemAssets.Instance.prefabs[3];
             case ItemType.BeetSeed:
-                return SetItemAssets.Instance.prefabs[1];
+                return SetItemAssets.Instance.prefabs[0];
             case ItemType.PotatoSeed:
                 return SetItemAssets.Instance.prefabs[2];
             case ItemType.EggplantSeed:
-                return SetItemAssets.Instance.prefabs[3];
+                return SetItemAssets.Instance.prefabs[1];
         }
     }
 

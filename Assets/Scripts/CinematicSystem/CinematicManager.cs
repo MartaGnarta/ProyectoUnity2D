@@ -7,6 +7,12 @@ using System;
 
 public class CinematicManager : MonoBehaviour
 {
+    public static CinematicManager Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public Transform gameCamera;
 
     public Transform[] cameraPositions;
@@ -16,6 +22,8 @@ public class CinematicManager : MonoBehaviour
         exitCinematicMode,
         wait,
         log,
+        activateOverlay,
+        desactivateOverlay,
         showDialog,
         setCameraPosition,
         setCameraSize,
@@ -100,6 +108,7 @@ public class CinematicManager : MonoBehaviour
         dialogTextC = dialogText.GetComponent<TextMeshPro>();
 
         gameCameraC = gameCamera.GetComponent<GameCamera>();
+        OnTriggerCinematic(0);
     }
 
     // Update is called once per frame
@@ -217,13 +226,13 @@ public class CinematicManager : MonoBehaviour
         }
     }
 
-    public void OnTriggerCinematic()
+    public void OnTriggerCinematic(int index)
     {
         Debug.Log("y");
         if (!isCinematicMode)
         {
             isCinematicMode = true;
-            sequenceIndex = 0;
+            sequenceIndex = index;
             commandIndex = 0;
         }
         else
