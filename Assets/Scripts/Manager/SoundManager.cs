@@ -8,6 +8,7 @@ public static class SoundManager {
         PlayerPlant,
         PlantGrow,
         Background,
+        MeowSound,
     }
 
     public static GameObject GetSoundObject()

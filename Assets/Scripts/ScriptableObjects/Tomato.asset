@@ -18,5 +18,7 @@ MonoBehaviour:
   - 8
   - 4
   - 2
-  PhaseIndex: 0
-  plantIndex: 3
+  PhaseIndex: 2
+  plantName: Tomato
+  timePaused: 0
+  plantAnimationController: {fileID: 9100000, guid: 6d02ef217aa900147ab2e6648502653b, type: 2}

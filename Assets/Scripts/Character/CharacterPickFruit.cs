@@ -5,8 +5,6 @@ using UnityEngine;
 public class CharacterPickFruit : MonoBehaviour
 {
     private CharacterInventory _characterInventory;
-    private int fruitNum;
-
 
     private void Start()
     {
@@ -17,12 +15,13 @@ public class CharacterPickFruit : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("plants"))
         {
-            var _plant = other.GetComponent<PlantPhases>();
+            var _plant = other.GetComponent<GrowingSystem>();
 
-            if (Input.GetButtonDown("Fire1")) //&& _plant.phaseNum == 3
+            if (Input.GetButtonDown("Fire1") && _plant.plantData.PhaseIndex == 3)
             {
-                _plant.ResetPhase();
-                _characterInventory.addItem(other.GetComponent<FruitIndex>().getIndex());               
+                Debug.Log(_plant.plantData.plantName);
+                _plant.resetPhase();
+                _characterInventory.addItem(_plant.plantData.plantName);               
             }
         }
     }

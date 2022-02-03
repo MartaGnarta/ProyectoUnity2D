@@ -25,6 +25,7 @@ public class CinematicManager : MonoBehaviour
         activateOverlay,
         desactivateOverlay,
         showDialog,
+        soundEffect,
         setCameraPosition,
         setCameraSize,
         cameraShake,
@@ -161,6 +162,10 @@ public class CinematicManager : MonoBehaviour
                 {
                     gameCameraC.ExitCinematicMode();
                     isCinematicMode = false;
+                }
+                else if (command.id == CinematicCommandId.soundEffect)
+                {
+                    SoundManager.PlaySound(SoundManager.Sound.MeowSound);
                 }
                 else if (command.id == CinematicCommandId.wait)
                 {

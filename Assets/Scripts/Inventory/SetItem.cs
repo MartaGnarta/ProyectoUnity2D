@@ -24,6 +24,7 @@ public class SetItem
     }
 
     public int index;
+    public int price;
     public ItemType itemType;
     public ItemState itemState;
     public int amount;
@@ -53,19 +54,19 @@ public class SetItem
         }
     }
 
-    public GameObject GetItem()
+    public PlantScriptableObject GetItem()
     {
         switch (itemType)
         {
             default:
             case ItemType.TomatoSeed:
-                return SetItemAssets.Instance.prefabs[3];
+                return SetItemAssets.Instance.plantScriptableObjects[3];
             case ItemType.BeetSeed:
-                return SetItemAssets.Instance.prefabs[0];
+                return SetItemAssets.Instance.plantScriptableObjects[0];
             case ItemType.PotatoSeed:
-                return SetItemAssets.Instance.prefabs[2];
+                return SetItemAssets.Instance.plantScriptableObjects[2];
             case ItemType.EggplantSeed:
-                return SetItemAssets.Instance.prefabs[1];
+                return SetItemAssets.Instance.plantScriptableObjects[1];
         }
     }
 

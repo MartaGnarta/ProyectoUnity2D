@@ -25,7 +25,8 @@ public class Update_InventoryUI : MonoBehaviour
             if (itemA.active && itemA.amount > 0)
             {
                 inventorySlot.gameObject.SetActive(true);
-                inventorySlot.GetComponent<Image>().sprite = itemA.GetSprite();                
+                inventorySlot.GetComponent<Image>().sprite = itemA.GetSprite();
+                break;
             }
             else
             {

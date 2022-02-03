@@ -9,7 +9,7 @@ public class CharacterPlant : MonoBehaviour
 
     private void Start()
     {
-        _characterInventory = GetComponent<CharacterInventory>();
+        _characterInventory = GetComponent<CharacterInventory>();        
     }
     public void OnTriggerStay2D(Collider2D other)
     {

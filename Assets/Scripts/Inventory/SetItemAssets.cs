@@ -11,7 +11,7 @@ public class SetItemAssets : MonoBehaviour
         Instance = this;
     }
 
-    public GameObject[] prefabs;
+    public PlantScriptableObject[] plantScriptableObjects;
     public Sprite[] item;
 
     public SoundAudioClip[] soundAudioClips;

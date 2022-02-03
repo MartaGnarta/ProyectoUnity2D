@@ -8,18 +8,22 @@ public class CharacterInventory : MonoBehaviour
     private SetInventory inventory;
     [SerializeField]
     private Update_InventoryUI _uiInventory;
+    private PlantSystem launcher;
+    public GameObject plantPrefab;
 
     private void Start()
     {
         inventory = new SetInventory();
         _uiInventory.SetInventory(inventory);
+        launcher = GetComponent<PlantSystem>();
     }
 
     public GameObject getSeed()
-    {
+    {        
         if (activeItem().itemState == SetItem.ItemState.seed)
         {
-            return activeItem().GetItem();
+            plantPrefab.GetComponent<GrowingSystem>().plantData = activeItem().GetItem();
+            return plantPrefab;
         }
         else
         {
@@ -34,18 +38,15 @@ public class CharacterInventory : MonoBehaviour
         refreshInventoryUI();
     }
 
-    public void addItem(int index)
+    public void addItem(string name)
     {
         foreach (SetItem item in inventory.GetItemList())
         {
-            if (item.index == index)
+            if (item.itemType.ToString().ToLower() == name.ToLower())
             {
                 inventory.SetActivityTrueItem(item);
                 inventory.IncreseAmountItem(item);
-            }                
-
-            Debug.Log("Cantidad del objeto" + item.itemType + " " + item.amount);
-            Debug.Log("Actividad del objeto" + item.itemType + " " + item.active);
+            }              
         }        
 
         refreshInventoryUI();

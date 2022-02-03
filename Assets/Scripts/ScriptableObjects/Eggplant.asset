@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9cfe98c28e90d44a055e2007fc3e92, type: 3}
   m_Name: Eggplant
   m_EditorClassIdentifier: 
-  growTime: 0
-  delayTimeToGrow: []
-  PhaseIndex: 0
-  plantIndex: 0
+  growTime: 12
+  delayTimeToGrow:
+  - 8
+  - 6
+  - 4
+  - 2
+  PhaseIndex: 2
+  plantName: Eggplant
+  timePaused: 0
+  plantAnimationController: {fileID: 9100000, guid: a383dfc295a2080409fad62423cefe02, type: 2}
