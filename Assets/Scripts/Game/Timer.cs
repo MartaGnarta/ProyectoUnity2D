@@ -20,6 +20,16 @@ public class Timer : MonoBehaviour
         if (!paused)
         {
             playTimer();
+
+            if (timeValue > 0)
+            {
+                timeValue -= Time.deltaTime;
+            }
+            else
+            {
+                timeValue = 0;
+
+            }
         }
         else
         {
@@ -42,15 +52,5 @@ public class Timer : MonoBehaviour
     public void playTimer()
     {
         paused = false; 
-
-        if (timeValue > 0)
-        {
-            timeValue -= Time.deltaTime;
-        }
-        else
-        {
-            timeValue = 0;
-
-        }
     }
 }

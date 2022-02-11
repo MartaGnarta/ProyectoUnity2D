@@ -14,6 +14,9 @@ public class SetItem
         BeetSeed,
         PotatoSeed,
         EggplantSeed,
+        Scarecrow,
+        WateringCan,
+        Insecticide,
     }
 
     public enum ItemState
@@ -29,6 +32,7 @@ public class SetItem
     public ItemState itemState;
     public int amount;
     public bool active;
+    public bool shopItem;
 
     public Sprite GetSprite()
     {
@@ -51,6 +55,12 @@ public class SetItem
                 return SetItemAssets.Instance.item[6];
             case ItemType.EggplantSeed:
                 return SetItemAssets.Instance.item[5];
+            case ItemType.Scarecrow:
+                return SetItemAssets.Instance.item[8];
+            case ItemType.WateringCan:
+                return SetItemAssets.Instance.item[9];
+            case ItemType.Insecticide:
+                return SetItemAssets.Instance.item[10];
         }
     }
 

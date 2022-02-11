@@ -18,7 +18,7 @@ public class CharacterGiveFruit : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("basket"))
         {            
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if (_characterInventory.activeItem() != null && _characterInventory.activeItem().itemState == SetItem.ItemState.fruit)
                 {

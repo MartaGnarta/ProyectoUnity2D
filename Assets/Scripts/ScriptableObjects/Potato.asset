@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9cfe98c28e90d44a055e2007fc3e92, type: 3}
   m_Name: Potato
   m_EditorClassIdentifier: 
-  growTime: 12
+  growTime: 30
   delayTimeToGrow:
-  - 8
-  - 6
-  - 4
-  - 2
+  - 15
+  - 5
+  - 0
   PhaseIndex: 0
   plantName: Potato
   timePaused: 0

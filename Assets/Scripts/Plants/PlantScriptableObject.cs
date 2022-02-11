@@ -8,9 +8,9 @@ public class PlantScriptableObject : ScriptableObject
     public float growTime;
     public float[] delayTimeToGrow;
     public int PhaseIndex;
-    public string plantName;    
+    public string plantName;   
 
-    public bool timePaused;
+    public bool timePaused;    
 
     public RuntimeAnimatorController plantAnimationController;    
 

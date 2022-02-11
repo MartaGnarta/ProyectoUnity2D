@@ -39,7 +39,7 @@ public class CharacterInventory : MonoBehaviour
     }
 
     public void addItem(string name)
-    {
+    {     
         foreach (SetItem item in inventory.GetItemList())
         {
             if (item.itemType.ToString().ToLower() == name.ToLower())
@@ -50,6 +50,19 @@ public class CharacterInventory : MonoBehaviour
         }        
 
         refreshInventoryUI();
+    }
+
+    public int getList(int index)
+    {
+        foreach (SetItem item in inventory.GetItemList())
+        {
+            if (item.shopItem && item.index == index)
+            {
+                return item.price;
+            }
+        }
+
+        return 0;
     }
 
     public SetItem activeItem()

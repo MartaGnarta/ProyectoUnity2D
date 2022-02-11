@@ -6,6 +6,13 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static PauseMenu instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public bool pauseActive;
     public GameObject menu;
 
@@ -20,24 +27,33 @@ public class PauseMenu : MonoBehaviour
         {
             setFalseTrue();
         }
+
+        if (pauseActive)
+        {
+            pauseGame();
+        }
+        else
+        {
+            resumeGame();
+        }
+
+        menu.SetActive(pauseActive);
+        
     }
 
     public void setFalseTrue()
-    {       
-        pauseActive ^= true;
-        menu.SetActive(pauseActive);
-        pauseGame();
+    {
+        pauseActive ^= true;        
     }
 
     public void pauseGame()
+    {            
+        Time.timeScale = 0;
+
+    }
+
+    public void resumeGame()
     {
-        if (pauseActive)
-        {            
-            Time.timeScale = 0;
-        }   
-        else
-        {            
-            Time.timeScale = 1;
-        }
+        Time.timeScale = 1;
     }
 }

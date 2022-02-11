@@ -13,6 +13,8 @@ public class SetItemAssets : MonoBehaviour
 
     public PlantScriptableObject[] plantScriptableObjects;
     public Sprite[] item;
+    public GameObject[] prefabs;
+    public Sprite deathPlant;
 
     public SoundAudioClip[] soundAudioClips;
 

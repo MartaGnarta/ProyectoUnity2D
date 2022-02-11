@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4002370890162247487}
   m_Layer: 8
   m_Name: Plant
-  m_TagString: Untagged
+  m_TagString: plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,8 +65,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebde6a1166aa1064ea40b3b0fd50e513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantData: {fileID: 0}
+  plantData: {fileID: 11400000, guid: 06938836dbea6154188045d5b7dfd0db, type: 2}
   growParticles: {fileID: 7053890060047407176, guid: ce78745a97390634c957c3449323215c, type: 3}
+  bugParticles: {fileID: 1407377929280595427, guid: 7c9ca9e6b4f637149bc5225553464da0, type: 3}
+  infected: 0
+  isplantDeath: 0
+  time: 0
 --- !u!58 &8555117422697363787
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -80,7 +84,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.066174, y: 0}
+  m_Offset: {x: 0, y: 0.15}
   serializedVersion: 2
   m_Radius: 0.2261749
 --- !u!212 &-4002370890162247487
@@ -124,14 +128,14 @@ SpriteRenderer:
   m_SortingLayerID: 80531123
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f77a51e61b3ed9943a3b56f7e7a621c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

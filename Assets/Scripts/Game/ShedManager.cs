@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShedManager : MonoBehaviour
 {
@@ -9,16 +10,9 @@ public class ShedManager : MonoBehaviour
     [SerializeField]
     private CharacterInventory _characterInventory;
 
-    private void Start()
-    {
-        
-    }
-
-    // Falta actualizar dinero despues de compras.
-
     public void addBeetSeedItem()
     {
-        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(100))
+        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(_characterInventory.getList(4)))
         {
             _characterInventory.addItem("BeetSeed");
         }
@@ -26,7 +20,7 @@ public class ShedManager : MonoBehaviour
 
     public void addEggplantSeedItem()
     {
-        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(100))
+        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(_characterInventory.getList(5)))
         {
             _characterInventory.addItem("EggplantSeed");
         }
@@ -34,7 +28,7 @@ public class ShedManager : MonoBehaviour
 
     public void addPotatoSeedItem()
     {
-        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(100))
+        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(_characterInventory.getList(6)))
         {
             _characterInventory.addItem("PotatoSeed");
         }
@@ -42,9 +36,42 @@ public class ShedManager : MonoBehaviour
 
     public void addTomatoSeedItem()
     {
-        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(100))
+        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(_characterInventory.getList(7)))
         {
             _characterInventory.addItem("TomatoSeed");
+        }
+    }
+
+    public void addWateringCan()
+    {
+        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(_characterInventory.getList(9)))
+        {
+            _characterInventory.addItem("WateringCan");
+        }
+    }
+
+    public void addScarecrow()
+    {
+        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(_characterInventory.getList(8)))
+        {            
+            _characterInventory.addItem("Scarecrow");
+        }
+    }
+
+    public void addInsecticide()
+    {
+        
+        if (_characterInventory.activeItem() == null && MoneyManager.instance.decreseMoney(_characterInventory.getList(10)))
+        {
+            _characterInventory.addItem("Insecticide");
+        }
+    }
+
+    public void returnItem()
+    {
+        if (_characterInventory.activeItem() != null)
+        {
+            _characterInventory.useItem();
         }
     }
 }

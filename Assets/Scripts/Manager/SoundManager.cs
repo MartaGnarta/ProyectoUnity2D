@@ -9,6 +9,7 @@ public static class SoundManager {
         PlantGrow,
         Background,
         MeowSound,
+        RavenSound,
     }
 
     public static GameObject GetSoundObject()
@@ -54,11 +55,6 @@ public static class SoundManager {
     public static bool isMusicMuted()
     {
         return GetMusicObject().GetComponent<AudioSource>().mute;
-    }
-
-    public static void soundValue()
-    {
-
     }
 
     private static AudioClip GetAudioClip(Sound sound)

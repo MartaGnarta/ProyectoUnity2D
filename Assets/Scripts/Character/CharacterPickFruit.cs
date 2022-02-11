@@ -17,7 +17,7 @@ public class CharacterPickFruit : MonoBehaviour
         {
             var _plant = other.GetComponent<GrowingSystem>();
 
-            if (Input.GetButtonDown("Fire1") && _plant.plantData.PhaseIndex == 3)
+            if (Input.GetButtonDown("Fire1") && _plant.plantData.PhaseIndex == 3 && _characterInventory.activeItem() == null)
             {
                 Debug.Log(_plant.plantData.plantName);
                 _plant.resetPhase();

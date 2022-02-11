@@ -2,33 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using System;
 
 public class ButtonScene : MonoBehaviour
 {
-    public int index;
-
-    public Button button;
-
-    private bool load;
-
-    private void Start()
+    public void loadMainmenu()
     {
-        load = false;
-        button.onClick.AddListener(buttonPressed);
+        GC.Collect();
+        PauseMenu.instance.resumeGame();
+        SceneManager.LoadScene(0);        
     }
 
-    private void Update()
-    {        
-        if (load)
-        {
-            SceneManager.LoadScene(index);
-            load = false;
-        }        
+    public void loadGame()
+    {
+        GC.Collect();
+        SceneManager.LoadScene(1);
     }
 
-    public void buttonPressed()
+    public void loadCredits()
     {
-        load = true;        
+        SceneManager.LoadScene(2);
+    }
+
+    public void loadMainmenuFromCredits()
+    {
+        SceneManager.LoadScene(0);
     }
 }

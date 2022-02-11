@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9cfe98c28e90d44a055e2007fc3e92, type: 3}
   m_Name: Tomato
   m_EditorClassIdentifier: 
-  growTime: 12
+  growTime: 25
   delayTimeToGrow:
+  - 20
   - 10
-  - 8
-  - 4
-  - 2
-  PhaseIndex: 2
+  - 0
+  PhaseIndex: 3
   plantName: Tomato
-  timePaused: 0
+  timePaused: 1
   plantAnimationController: {fileID: 9100000, guid: 6d02ef217aa900147ab2e6648502653b, type: 2}

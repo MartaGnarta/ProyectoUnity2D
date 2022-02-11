@@ -128,7 +128,7 @@ public class CinematicManager : MonoBehaviour
                 dialogCharacters[character].gameObject.SetActive(true);
                 dialogTextC.text = text;
 
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetButtonDown("Fire1"))
                 {
                     showingDialog = false;
                     for (int i = 0; i < dialogCommon.Length; i++) { dialogCommon[i].gameObject.SetActive(false); }
@@ -155,6 +155,7 @@ public class CinematicManager : MonoBehaviour
 
                 if (command.id == CinematicCommandId.enterCinematicMode)
                 {
+                    GC.Collect();
                     gameCameraC.EnterCinematicMode();
                     isCinematicMode = true;
                 }

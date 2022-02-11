@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9cfe98c28e90d44a055e2007fc3e92, type: 3}
   m_Name: Beet
   m_EditorClassIdentifier: 
-  growTime: 12
+  growTime: 40
   delayTimeToGrow:
-  - 8
-  - 6
-  - 4
-  - 2
-  PhaseIndex: 0
+  - 35
+  - 20
+  - 0
+  PhaseIndex: 1
   plantName: Beet
   timePaused: 0
   plantAnimationController: {fileID: 9100000, guid: a8f3718922c90734682b9119e80e6f87, type: 2}

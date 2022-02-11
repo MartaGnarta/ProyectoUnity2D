@@ -10,15 +10,19 @@ public class SetInventory
     {
         itemList = new List<SetItem>();
 
-        AddItem(new SetItem { itemType = SetItem.ItemType.Beet, itemState = SetItem.ItemState.fruit, index = 0, price = 130, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.Eggplant, itemState = SetItem.ItemState.fruit, index = 1, price = 110, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.Potato, itemState = SetItem.ItemState.fruit, index = 2, price = 80, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.Tomato, itemState = SetItem.ItemState.fruit, index = 3, price = 50, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Beet, itemState = SetItem.ItemState.fruit, index = 0, price = 115, amount = 0, active = false, shopItem = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Eggplant, itemState = SetItem.ItemState.fruit, index = 1, price = 95, amount = 0, active = false, shopItem = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Potato, itemState = SetItem.ItemState.fruit, index = 2, price = 85, amount = 0, active = false, shopItem = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Tomato, itemState = SetItem.ItemState.fruit, index = 3, price = 65, amount = 0, active = false, shopItem = false });
 
-        AddItem(new SetItem { itemType = SetItem.ItemType.BeetSeed, itemState = SetItem.ItemState.seed, index = 4, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.EggplantSeed, itemState = SetItem.ItemState.seed, index = 5, amount = 1, active = true });
-        AddItem(new SetItem { itemType = SetItem.ItemType.PotatoSeed, itemState = SetItem.ItemState.seed, index = 6, amount = 0, active = false });
-        AddItem(new SetItem { itemType = SetItem.ItemType.TomatoSeed, itemState = SetItem.ItemState.seed, index = 7, amount = 0, active = false });
+        AddItem(new SetItem { itemType = SetItem.ItemType.BeetSeed, itemState = SetItem.ItemState.seed, index = 4, price = 90, amount = 0, active = false, shopItem = true });
+        AddItem(new SetItem { itemType = SetItem.ItemType.EggplantSeed, itemState = SetItem.ItemState.seed, index = 5, price = 70, amount = 0, active = false, shopItem = true });
+        AddItem(new SetItem { itemType = SetItem.ItemType.PotatoSeed, itemState = SetItem.ItemState.seed, index = 6, price = 60, amount = 0, active = false, shopItem = true });
+        AddItem(new SetItem { itemType = SetItem.ItemType.TomatoSeed, itemState = SetItem.ItemState.seed, index = 7, price = 40, amount = 1, active = true, shopItem = true });
+
+        AddItem(new SetItem { itemType = SetItem.ItemType.Scarecrow, itemState = SetItem.ItemState.toUse, index = 8, price = 450, amount = 0, active = false, shopItem = true });
+        AddItem(new SetItem { itemType = SetItem.ItemType.WateringCan, itemState = SetItem.ItemState.toUse, index = 9, price = 1000, amount = 0, active = false, shopItem = true });
+        AddItem(new SetItem { itemType = SetItem.ItemType.Insecticide, itemState = SetItem.ItemState.toUse, index = 10, price = 50, amount = 0, active = false, shopItem = true });
     }
 
     public void AddItem(SetItem item)

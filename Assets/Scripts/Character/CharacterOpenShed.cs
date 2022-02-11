@@ -15,10 +15,13 @@ public class CharacterOpenShed : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (isActive)
         {
-            menuShed.SetActive(false);
-            changeBoolean();
+            openShed();
+        }
+        else
+        {
+            closeShed();
         }
     }
 
@@ -32,6 +35,17 @@ public class CharacterOpenShed : MonoBehaviour
                 changeBoolean();
             }
         }
+    }
+
+    public void openShed()
+    {
+        menuShed.SetActive(true);
+    }
+
+    public void closeShed()
+    {
+        isActive = false;
+        menuShed.SetActive(false);
     }
 
     public void changeBoolean()
