@@ -50,10 +50,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -92,6 +94,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -340,9 +343,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      RavenAttack_Spritesheet_3: -3385742918596719707
+      RavenAttack_Spritesheet_8: 6791450550629992078
+      RavenAttack_Spritesheet_4: -4689619723027071050
+      RavenAttack_Spritesheet_1: -4301317694548188635
+      RavenAttack_Spritesheet_5: -2253705326076468941
+      RavenAttack_Spritesheet_9: -4026014858127471582
+      RavenAttack_Spritesheet_6: -7530858737845586829
+      RavenAttack_Spritesheet_2: 4609218499161147858
+      RavenAttack_Spritesheet_0: -2561812676348010847
+      RavenAttack_Spritesheet_7: -8785932129446507356
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
